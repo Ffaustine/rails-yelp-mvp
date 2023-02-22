@@ -1,0 +1,11 @@
+<h1 class= "m-3"> Restaurants </h1>
+
+<% @restaurants.each do |restaurant| %>
+  <ul class="list-inline m-3">
+    <li class="list-group-item"><strong><%= restaurant.name %></strong></li>
+    <li class="list-group-item">Adress: <%= restaurant.address %></li>
+    <li class="list-group-item">Phone number: <%= restaurant.phone_number %></li>
+    <li class="list-group-item">Category: <%= restaurant.category %></li>
+    <li class="list-group-item"><%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
+  </ul>
+<%end%>
